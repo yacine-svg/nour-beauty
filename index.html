@@ -3,8 +3,18 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<meta name="description" content="Nour Beauty, soins naturels du Maghreb. Livraison 58 wilayas, paiement à la livraison.">
-<link rel="icon" href="/favicon.png">
+<meta name="description" content="Figue de Barbarie, nigelle, eau de rose, ghassoul. Livraison dans les 58 wilayas, paiement à la livraison.">
+<link rel="icon" href="favicon.png">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Nour Beauty · Soins naturels du Maghreb">
+<meta property="og:description" content="Figue de Barbarie, nigelle, eau de rose, ghassoul. Livraison dans les 58 wilayas, paiement à la livraison.">
+<meta property="og:image" content="https://nour-beauty.vercel.app/preview.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:url" content="https://nour-beauty.vercel.app/">
+<meta property="og:locale" content="fr_DZ">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#2A0E24">
 <style>[hidden]{display:none!important}body{margin:0}img{max-width:100%}</style>
 <title>Nour Beauty</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -235,6 +245,89 @@ footer b{color:#FFB3D0}
 .small{font-size:.82rem;color:var(--muted);margin:0}
 .toast{position:fixed;left:50%;bottom:90px;z-index:30;transform:translateX(-50%);background:var(--ink);color:var(--bg);padding:10px 16px;border-radius:999px;font-weight:600;font-size:.9rem;box-shadow:0 14px 30px -12px rgba(0,0,0,.4);animation:toast 2.2s ease both;white-space:nowrap}
 
+
+/* ================= Luxe refresh ================= */
+:root{--h1:#2A0E24;--h2:#5A1F4C;--h3:#8E2A5E;--hink:#FBEFF4;--hmut:#E3C6D5;--gold2:#E7C98E}
+/* page texture + roaming color */
+.pagefx{position:fixed;inset:0;z-index:-1;pointer-events:none;overflow:hidden}
+.pagefx span{position:absolute;border-radius:50%;filter:blur(70px);opacity:.5;animation:roam 30s ease-in-out infinite alternate}
+.pagefx .a{width:46vmax;height:46vmax;left:-18vmax;top:60vh;background:color-mix(in srgb,var(--fig) 18%,transparent)}
+.pagefx .b{width:40vmax;height:40vmax;right:-16vmax;top:130vh;background:color-mix(in srgb,var(--gold) 22%,transparent);animation-duration:36s}
+.pagefx .c{width:34vmax;height:34vmax;left:25vw;top:220vh;background:color-mix(in srgb,var(--olive) 16%,transparent);animation-duration:42s}
+.grain{position:fixed;inset:0;z-index:-1;pointer-events:none;opacity:.05;background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='160' height='160'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='3' stitchTiles='stitch'/></filter><rect width='100%' height='100%' filter='url(%23n)'/></svg>")}
+body{isolation:isolate}
+/* scroll progress */
+.sprog{position:fixed;left:0;top:0;height:3px;width:100%;z-index:40;transform-origin:0 50%;transform:scaleX(0);background:linear-gradient(90deg,var(--gold),var(--fig))}
+
+/* HERO: deep plum dusk */
+.hero{background:radial-gradient(120% 90% at 85% 10%,var(--h3) 0%,transparent 55%),radial-gradient(90% 80% at 0% 100%,#3B1433 0%,transparent 60%),linear-gradient(160deg,var(--h2),var(--h1));color:var(--hink);padding-bottom:48px}
+.hero::before{content:"";position:absolute;inset:-40%;background:conic-gradient(from 0deg at 60% 40%,transparent 0 20%,rgba(231,201,142,.10) 25%,transparent 32%,transparent 55%,rgba(255,179,208,.10) 60%,transparent 68%);animation:sweep 24s linear infinite;pointer-events:none}
+@keyframes sweep{to{transform:rotate(360deg)}}
+
+.blobs span{opacity:.45}
+.blobs .b1{background:rgba(255,120,175,.45)}
+.blobs .b2{background:rgba(231,201,142,.35)}
+.blobs .b3{background:rgba(160,90,200,.30)}
+.dust{position:absolute;inset:0;pointer-events:none;z-index:1}
+.dust b{position:absolute;width:3px;height:3px;border-radius:50%;background:var(--gold2);box-shadow:0 0 8px 2px rgba(231,201,142,.7);animation:twinkle ease-in-out infinite}
+@keyframes twinkle{0%,100%{opacity:0;transform:scale(.4)}50%{opacity:1;transform:scale(1.2)}}
+.hero .eyebrow{color:var(--gold2)}
+.hero h1{color:var(--hink)}
+.hero h1 em{background:linear-gradient(90deg,#FFB3D0,var(--gold2),#FFB3D0);background-size:200% 100%;-webkit-background-clip:text;background-clip:text;color:transparent;animation:shimmerText 6s linear infinite}
+@keyframes shimmerText{to{background-position:-200% 0}}
+.hero .arline{color:#FFB3D0}
+.hero p.lead{color:var(--hmut)}
+.hero .btn.ghost{color:var(--hink);box-shadow:inset 0 0 0 1.5px rgba(251,239,244,.6)}
+.hero .btn.fig{background:linear-gradient(135deg,#E0588F,#B3306B);color:#fff;box-shadow:0 12px 28px -12px rgba(224,88,143,.8)}
+.hero .logo b{color:var(--hink)}
+.hero .logo b i{color:var(--gold2)}
+.hero .logo span{color:var(--hmut)}
+.hero .cartbtn{background:rgba(255,255,255,.12);color:var(--hink);box-shadow:inset 0 0 0 1px rgba(255,255,255,.25);backdrop-filter:blur(8px)}
+.stage .disc{background:radial-gradient(circle at 50% 35%,rgba(255,255,255,.22),rgba(255,255,255,.04) 65%);border:1px solid rgba(255,255,255,.22);box-shadow:inset 0 -30px 60px -30px rgba(255,179,208,.35),0 40px 80px -40px rgba(0,0,0,.6)}
+.stage .ring{border-color:rgba(231,201,142,.45)}
+.stage .halo2{position:absolute;left:50%;bottom:24%;width:60%;aspect-ratio:1;transform:translateX(-50%);border-radius:50%;background:radial-gradient(circle,rgba(255,179,208,.45),transparent 65%);animation:pulseGlow 4s ease-in-out infinite}
+.stage .p{filter:drop-shadow(0 22px 22px rgba(0,0,0,.4))}
+.stage .shadow{position:absolute;left:50%;bottom:28px;width:70%;height:22px;transform:translateX(-50%);border-radius:50%;background:radial-gradient(closest-side,rgba(0,0,0,.45),transparent);animation:shadowPulse 5.5s ease-in-out infinite}
+@keyframes shadowPulse{0%,100%{transform:translateX(-50%) scale(1);opacity:.8}50%{transform:translateX(-50%) scale(.88);opacity:.55}}
+.tag{background:rgba(255,255,255,.92);color:#2C1426;backdrop-filter:blur(6px)}
+
+/* Ticker: gold on deep plum */
+.ticker{background:linear-gradient(90deg,var(--h1),var(--h2),var(--h1));color:#F6E3E4;border-block:1px solid rgba(231,201,142,.35)}
+.ticker span::before{color:var(--gold2)}
+
+/* Headings shimmer on emphasised words */
+.head h2 em{background:linear-gradient(90deg,var(--fig),var(--gold),var(--fig));background-size:200% 100%;-webkit-background-clip:text;background-clip:text;color:transparent;animation:shimmerText 7s linear infinite}
+
+/* Cards: spotlight + holo sweep */
+.card .vis{--mx:50%;--my:40%}
+.card .vis::before{content:"";position:absolute;inset:0;background:radial-gradient(180px circle at var(--mx) var(--my),rgba(255,255,255,.55),transparent 60%);opacity:0;transition:opacity .3s;z-index:1;pointer-events:none}
+.card:hover .vis::before{opacity:1}
+.card .vis .holo{position:absolute;inset:0;z-index:2;pointer-events:none;background:linear-gradient(115deg,transparent 30%,rgba(255,255,255,.45) 45%,rgba(255,200,230,.35) 50%,transparent 62%);background-size:250% 100%;background-position:150% 0;transition:background-position .9s ease}
+.card:hover .vis .holo{background-position:-60% 0}
+.badges{z-index:3}
+.bdg.new{animation:badgePulse 2.4s ease-in-out infinite}
+@keyframes badgePulse{0%,100%{box-shadow:0 0 0 0 rgba(95,127,99,.45)}50%{box-shadow:0 0 0 6px rgba(95,127,99,0)}}
+
+/* Ingredients band */
+.ingband{position:relative}
+.ingband::before{content:"";position:absolute;top:0;bottom:0;left:50%;width:100vw;transform:translateX(-50%);z-index:-1;background:linear-gradient(180deg,transparent,color-mix(in srgb,var(--blush) 85%,transparent) 18%,color-mix(in srgb,var(--blush) 85%,transparent) 82%,transparent)}
+.ing{transition:translate .3s,box-shadow .3s}
+.ing:hover{translate:0 -4px;box-shadow:0 20px 36px -24px rgba(74,29,63,.5)}
+.ing .dot{position:relative}
+.ing .dot::after{content:"";position:absolute;inset:-6px;border-radius:50%;border:1.5px solid currentColor;opacity:.0;color:var(--fig)}
+.ing:hover .dot::after{animation:ringOut 1.2s ease-out infinite}
+@keyframes ringOut{from{opacity:.6;transform:scale(.8)}to{opacity:0;transform:scale(1.5)}}
+.ing::after{content:"";position:absolute;right:-30px;bottom:-30px;width:110px;height:110px;border-radius:50%;background:radial-gradient(circle,color-mix(in srgb,var(--fig) 14%,transparent),transparent 70%)}
+
+/* Coffret sparkle */
+.coffret{background:radial-gradient(80% 90% at 90% 10%,var(--h3),transparent 60%),linear-gradient(150deg,var(--h2),var(--h1))}
+.coffret .dust{z-index:0}
+
+/* Footer wave */
+footer{position:relative;margin-top:100px;background:linear-gradient(160deg,var(--h2),var(--h1))}
+footer::before{content:"";position:absolute;left:0;right:0;top:-38px;height:40px;background:var(--h2);-webkit-mask:radial-gradient(28px 22px at 50% 100%,#000 98%,transparent) 0 0/56px 40px repeat-x;mask:radial-gradient(28px 22px at 50% 100%,#000 98%,transparent) 0 0/56px 40px repeat-x;animation:footWave 7s linear infinite}
+@keyframes footWave{to{-webkit-mask-position:56px 0;mask-position:56px 0}}
+
 /* Motion */
 @keyframes rise{from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:none}}
 @keyframes bob{0%,100%{transform:translateY(0)}50%{transform:translateY(-10px)}}
@@ -262,9 +355,11 @@ footer b{color:#FFB3D0}
 <body>
 
 
+<div class="pagefx" aria-hidden="true"><span class="a"></span><span class="b"></span><span class="c"></span></div><div class="grain" aria-hidden="true"></div><div class="sprog" id="sprog" aria-hidden="true"></div>
 <header class="hero">
   <div class="blobs" aria-hidden="true"><span class="b1"></span><span class="b2"></span><span class="b3"></span></div>
   <div class="petals" id="petals" aria-hidden="true"></div>
+  <div class="dust" id="dust" aria-hidden="true"></div>
   <nav class="topbar" aria-label="Navigation">
     <a class="logo" href="#"><b>Nour<i>.</i></b><span>نور للتجميل</span></a>
     <button class="cartbtn" id="cartTop" type="button" aria-label="Voir le panier">
@@ -281,7 +376,7 @@ footer b{color:#FFB3D0}
       <div class="ctas"><a class="btn fig" href="#shop">Découvrir la boutique</a><a class="btn ghost" href="#livraison">Livraison & prix</a></div>
     </div>
     <div class="stage" aria-hidden="true">
-      <div class="ring"></div><div class="disc"></div>
+      <div class="ring"></div><div class="disc"></div><div class="halo2"></div><div class="shadow"></div>
       <div class="p p1" id="hp1"></div><div class="p p2" id="hp2"></div><div class="p p3" id="hp3"></div>
       <div class="tag t1"><b>★ 4,9 / 5</b>notes clientes</div>
       <div class="tag t2"><b>💵 À la livraison</b>58 wilayas</div>
@@ -298,7 +393,7 @@ footer b{color:#FFB3D0}
     <div class="grid" id="grid"></div>
   </section>
 
-  <section class="block">
+  <section class="block ingband">
     <div class="head"><span class="eyebrow">Nos ingrédients</span><h2>Ce qui pousse chez nous, <em>dans vos soins</em></h2></div>
     <div class="ingr">
       <div class="ing"><span class="dot" style="background:#B3306B">تين</span><h3>Figue de Barbarie</h3><p>L'huile de ses pépins est riche en vitamine E. Elle lisse les ridules et donne de l'éclat.</p></div>
@@ -317,7 +412,7 @@ footer b{color:#FFB3D0}
         <div class="pr" id="cofPrice"></div>
         <button class="btn fig" type="button" data-open="coffret" style="width:fit-content">Voir le coffret</button>
       </div>
-      <div class="vis"><div class="glow"></div><div id="cofVis"></div></div>
+      <div class="vis"><div class="dust" id="dust2"></div><div class="glow"></div><div id="cofVis"></div></div>
     </div>
   </section>
 
@@ -428,7 +523,7 @@ function renderCats(){$("#cats").innerHTML=CATS.map(([k,v])=>`<button type="butt
 function renderGrid(){
   $("#grid").innerHTML=P.filter(p=>cat==="all"||p.cat===cat).map(p=>`
     <article class="card ${p.badge==="out"?"is-out":""}">
-      <button class="vis" type="button" data-open="${p.id}" style="background:${bgOf(p.c)}" aria-label="Voir ${p.n}"><span class="badges">${badgeHTML(p)}</span>${art(p.type,p.c,p.lab)}</button>
+      <button class="vis" type="button" data-open="${p.id}" style="background:${bgOf(p.c)}" aria-label="Voir ${p.n}"><span class="badges">${badgeHTML(p)}</span><span class="holo"></span>${art(p.type,p.c,p.lab)}</button>
       <div class="info">
         <h3>${p.n}</h3><span class="sub">${p.sizes.map(s=>s[0]).join(" · ")}</span>
         <div class="row"><span class="price">${p.sizes.length>1?"<small>dès</small>":""}${priceHTML(p)}</span>
@@ -550,6 +645,15 @@ $("#cofVis").innerHTML=art("box","#B3306B","Nour");
 $("#cofPrice").innerHTML=`${fmt(7500)}<s>${fmt(8200)}</s>`;
 $("#ticker").innerHTML=Array(2).fill(["Paiement à la livraison","Livraison dans les 58 wilayas","Ingrédients naturels","Échange sous 7 jours","Livraison gratuite dès 8 000 DA"].map(t=>`<span>${t}</span>`).join("")).join("");
 (function petals(){if(matchMedia("(prefers-reduced-motion: reduce)").matches)return;let h="";for(let i=0;i<16;i++){const s=.7+Math.random()*.8;h+=`<i style="left:${Math.random()*100}%;transform:scale(${s});--dx:${(Math.random()*160-80).toFixed(0)}px;--rot:${(Math.random()*720-360).toFixed(0)}deg;animation-duration:${(10+Math.random()*10).toFixed(1)}s;animation-delay:${(-Math.random()*20).toFixed(1)}s"></i>`}$("#petals").innerHTML=h})();
+(function fx(){
+  const reduce=matchMedia("(prefers-reduced-motion: reduce)").matches;
+  const dust=(el,n)=>{if(!el||reduce)return;let h="";for(let i=0;i<n;i++)h+=`<b style="left:${(Math.random()*100).toFixed(1)}%;top:${(Math.random()*100).toFixed(1)}%;animation-duration:${(2+Math.random()*3).toFixed(1)}s;animation-delay:${(-Math.random()*4).toFixed(1)}s;transform:scale(${(.5+Math.random()).toFixed(2)})"></b>`;el.innerHTML=h};
+  dust($("#dust"),40);dust($("#dust2"),18);
+  const bar=$("#sprog");
+  const onScroll=()=>{const h=document.documentElement,max=h.scrollHeight-h.clientHeight;bar.style.transform=`scaleX(${max>0?h.scrollTop/max:0})`};
+  addEventListener("scroll",onScroll,{passive:true});onScroll();
+  document.addEventListener("pointermove",e=>{const v=e.target.closest&&e.target.closest(".card .vis");if(!v)return;const r=v.getBoundingClientRect();v.style.setProperty("--mx",((e.clientX-r.left)/r.width*100)+"%");v.style.setProperty("--my",((e.clientY-r.top)/r.height*100)+"%")});
+})();
 renderCats();renderGrid();update();
 </script>
 
